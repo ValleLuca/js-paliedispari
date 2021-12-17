@@ -17,22 +17,22 @@ function generatoreRandom(dUtente){                     //creare una funzione pe
 
 function checkPariDispari(pariOdispari){                     //creare una funzione per controllare se il risultato è pari o dispari
 let finale = "";
-    if(pariOdispari % 2 == 0){
-        finale = "pari";
+    if(pariOdispari % 2 == 0){                               //Controrllo pari o dispari dividento per due la somma
+        finale = "pari";                                     //vincitore pari
     }
     else
     {
-        finale = "dispari";
+        finale = "dispari";                                 //vincitore dispari
     }
 
     return finale;
 }
 
-function who(vincitore){
+function who(vincitorepc, vincitoreutente){                 //controllo chi ha indovinato tra pc e utente sul pari o dispari?
 
-    let finalista = "Ha vinto il pc";
+    let finalista = "Ha vinto il pc";                       //dichiarazione variabile per la vincita del pc
     
-    if(vincitore == pariodispariUtente){
+    if(vincitorepc == vincitoreutente){                     //dichiarazione variabile per la vincita dell'utente
         finalista = "Ha vinto l'utente"
     }
 
@@ -40,13 +40,16 @@ function who(vincitore){
 
 } 
 
+//variabili e console.log per input utente e generatore dati
 let numeroUtente = parseInt(prompt("inserisci il numero da 1 a 5"));    //creare un prompt per inserire il numero
 let datoUtenteFunction = generatoreRandom(numeroUtente);                //assegnazione dato utente alla function
 console.log(datoUtenteFunction);                                        //Risultato somma in console
 
+//variabili e console.log per controllo risultato pari o dispari
 let check = checkPariDispari(datoUtenteFunction);                       //assegnazione somma alla function
 console.log(check);                                                     //Risultato pari o dispari
 
-let chihavinto = who(check);                                           //assegnazione risultato pari o dispari alla function
+//variabili e console.log per controllo se l'utente ha azzeccato il risultato pari o dispari
 let pariodispariUtente = prompt("inserisci pari o dispari");            //creare un prompt per inserire pari o dispari
-console.log(chihavinto);                                               //Risultato pari o dispari
+let chihavinto = who(check, pariodispariUtente);                        //assegnazione risultato pari o dispari alla function
+console.log(chihavinto);                                                //Risultato pari o dispari
