@@ -9,7 +9,7 @@ Dichiariamo chi ha vinto.
 
 //creare una select in html per scegliere pari o dispari
 //creare un bottone che fara partire un prompt
-//creare un prompt per inserire il numero
+let numeroUtente = parseInt(prompt("inserisci il numero")); //creare un prompt per inserire il numero
 //creare una funzione per generare un numero random per il rivale "pc"
 //sommare i due numeri
 //creare una funzione per controllare se i due numeri sommati sono pari o dispati
