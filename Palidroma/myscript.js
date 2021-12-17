@@ -5,15 +5,19 @@ Creare una funzione per capire se la parola inserita è palindroma
 */
 
 function reverseFunction(valore){
-    console.log(valore.lenght);
-
     for(let i = 0; i < valore.lenght; i++) {
         console.log(valore);
     }
 }
 
 let parolaUtente = prompt("Inserire la parola palidroma");
-let parola = reverseFunction("parolaUtente");
+console.log(parolaUtente[1]);
+console.log(parolaUtente[2]);
+console.log(parolaUtente[3]);
+console.log(parolaUtente[4]);
+console.log(parolaUtente.lenght);
+
+let parola = reverseFunction(parolaUtente);
 
 //chiedere la parola
 //creare un funzione
