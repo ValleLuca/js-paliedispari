@@ -4,21 +4,25 @@ Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 */
 
-function reverseFunction(valore){ //creare un funzione
-    let confrontoArr = [];
-    for(let i = 0; i < valore.length; i++) { //controllare con un'array se la parola al contrairo è uguale
-        
-        confrontoArr.push(valore[i]);
+function checkPalidroma(valore){ //creare un funzione
 
+    let l = valore.length; //lunghezza parola inserita dall'utente
+    let risultato = true; // variabile per risultato settata su true
+
+    for(let i = 0; i < l / 2; i++) { //ciclo per ogni singola lettera
         
+        if(valore[i] != valore[l - 1 - i]){ //controllo a specchio della parola
+            risultato = false; //riscontro negativo
+        }
+
     }
-    console.log(confrontoArr);
+
+    return risultato;
 }
 
 let parolaUtente = prompt("Inserire la parola palidroma"); //chiedere la parola
-let parola = reverseFunction(parolaUtente);
+let parola = checkPalidroma(parolaUtente); //Dati utenti inseriti nella funzione
+console.log(parola); //stampare un risultato
 
 
 
-
-//stampare un risultato
